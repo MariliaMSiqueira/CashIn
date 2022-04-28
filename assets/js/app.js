@@ -1,15 +1,14 @@
 // VARIÁVEIS PARA O MODAL
-var divTitle = document.getElementById("divTitle");
-var modalTitle = document.getElementById("modalTitle");
-var modalBody = document.getElementById("modal-body");
-var modalButton = document.getElementById("modalButton");
+let divTitle = document.getElementById("divTitle");
+let modalTitle = document.getElementById("modalTitle");
+let modalBody = document.getElementById("modal-body");
+let modalButton = document.getElementById("modalButton");
 
-var year = document.getElementById("year");
-var month = document.getElementById("month");
-var day = document.getElementById("day");
-var type = document.getElementById("type");
-var description = document.getElementById("description");
-var price = document.getElementById("price");
+let year = document.getElementById("year");
+let month = document.getElementById("month");
+let day = document.getElementById("day");
+let type = document.getElementById("type");
+let price = document.getElementById("price");
 
 // ABSTRAÇÃO DA DESPESA
 // 2°  CRIAÇÃO DE UMA CLASS
@@ -147,13 +146,11 @@ function registerInfo() {
     description.value,
     price.value
   );
-  
 
   // 4° VALIDAÇÃO DOS CAMPOS PREENCHIDOS
   if (expense.validate()) {
     // DA INSTANCIA DE BD FOI INVOCADA O MÉTODO PINSTORAGE
     bd.pinStorage(expense);
-
     divTitle.className = "modal-header text-success";
     modalTitle.innerHTML = "Registrado com sucesso!";
     modalBody.innerHTML = "Sua despesa foi cadastrada com sucesso.";
